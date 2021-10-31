@@ -20,8 +20,10 @@ export default function App() {
       <h1>Hello React World</h1>
 
       <section>
-        {!status.error && <>API Version: <code>{status.version}</code></>}
-        {status.error && <>API Error: <code>{status.error}</code></>}
+        {!status.error &&
+          <>API Version: <code>{status.version}</code></>}
+        {status.error &&
+          <>API Error: <code>{status.error}</code></>}
       </section>
     </div>
   );
