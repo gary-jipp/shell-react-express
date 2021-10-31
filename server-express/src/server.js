@@ -5,11 +5,10 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-
 // serve static files from ../build (important for React)
 const cwd = process.cwd();
 const public = path.join(cwd, '..', 'public');
-console.log("public: ", public);
+console.log("public dir: ", public);
 app.use(express.static(public));
 
 app.get("/api/status", (req, res) => {
