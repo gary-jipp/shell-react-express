@@ -8,12 +8,11 @@
   },
   "scripts": {
     "start": "(cd server-express && npm start);",
-    "build:server": "cd server-express && npm install",
-    "build:client": "cd client-react && npm install && npm run build",
+    "build:client": "cd client-react && npm run build",
     "install:server": "cd server-express && npm install",
     "install:client": "cd client-react && npm install",
     "install": "(npm run install:server) && (npm run install:client)",
-    "build": "npm run build:server && npm run build:client",
+    "build": "npm run build:client",
     "deploy": "cp -a client-react/build/. public",
     "heroku-postbuild": "npm run build && npm run deploy"
   },
