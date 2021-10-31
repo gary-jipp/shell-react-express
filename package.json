@@ -16,7 +16,7 @@
     "deploy:nix": "cp -a client-react/build/. public",
     "deploy:win": "xcopy /e /y /i /q client-react\\build public",
     "deploy": "(npm run deploy:nix) || (npm run deploy:win)",
-    "heroku-postbuild": "npm run build && npm run deploy"
+    "heroku-postbuild": "(npm run build) && (npm run deploy)"
   },
   "repository": {
     "type": "git",
