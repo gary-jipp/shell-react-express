@@ -1,0 +1,24 @@
+{
+  "name": "shell-react-express",
+  "version": "1.0.0",
+  "description": "Shell for React/Express combined app",
+  "main": "server.js",
+  "engines": {
+    "node": "12"
+  },
+  "scripts": {
+    "start": "(cd server-express && npm start);",
+    "build:server": "cd server-express && npm install",
+    "build:client": "cd client-react && npm install && npm run build",
+    "build": "npm run build:server && npm run build:client",
+    "deploy": "cp -a client-react/build/. public",
+    "heroku-postbuild": "npm run build && npm run deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
