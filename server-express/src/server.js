@@ -23,5 +23,5 @@ app.use(function(req, res) {
 
 
 app.listen(PORT, () => {
-  console.log(`Demo API started on port ${PORT}!`);
+  console.log(`Server started on port ${PORT}!`);
 });
