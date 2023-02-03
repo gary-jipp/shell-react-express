@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "homepage": ".",
-  "proxy": "http://localhost:8000",
+  "proxy": "http://localhost:8080",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build"
