@@ -2,7 +2,7 @@
 
 React-Express Shell app ready for node deployment to Heroku or other similar platforms.  React and Express code are separate mini-projects and build/deployment is handled by the top level package.json
 
-When the React App starts, it makes a single API call to the API server for the version number and renders that 
+When the React App starts, it makes a single API call to the API server for the version number and renders that, or an error if API call was unsucessful
 
 ### Built for node 16
 
