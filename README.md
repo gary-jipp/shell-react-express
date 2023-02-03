@@ -8,14 +8,14 @@ When the React App starts, it makes a single API call to the API server for the 
 
 Copy `env.example` to `.env` to override the default env values
 
-### Starting as a Single App (Production)
+### Starting as a Single App (for Production only)
 ```
 npm install
 npm build
 npm start
 ```
 
-### Starting as Individual Apps (Development)
+### Starting as Individual Apps (for Development)
 ```
 cd server-express
 npm install
