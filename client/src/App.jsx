@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import useData from './hooks/useData';
-import ItemList from './components/FriendList';
+import DataList from './components/Dataist';
 import './App.css';
 
 export default function App() {
@@ -25,7 +25,7 @@ export default function App() {
       <input type="text" value={text} onChange={e => setText(e.target.value)} />
       <button onClick={addFriend}>Add</button>
 
-      <ItemList friends={data} deleteItem={deleteItem} />
+      <DataList friends={data} deleteItem={deleteItem} />
     </div>
   );
 }

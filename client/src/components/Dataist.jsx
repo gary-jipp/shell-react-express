@@ -1,18 +1,18 @@
 import React from 'react';
-import FriendListItem from './FriendListItem';
+import DataListItem from './DataListItem';
 
-function ItemList(props) {
+function DataList(props) {
   const friends = props.friends || [];
 
-  const remove = function(id) {
+  const removeItem = function(id) {
     props.deleteItem(id);
   };
 
   const list = friends.map((item) => {
-    return <FriendListItem
+    return <DataListItem
       key={item.id}
       item={item}
-      deleteItem={() => remove(item.id)} />;
+      onClick={() => removeItem(item.id)} />;
   });
 
   return (
@@ -20,4 +20,4 @@ function ItemList(props) {
   );
 }
 
-export default ItemList;
+export default DataList;
