@@ -6,8 +6,8 @@
   "scripts": {
     "install:server": "cd server && npm install",
     "install:client": "cd client && npm install",
-    "deploy:client": "mv -f client/dist/ ./public",
     "build:client": "cd client && npm run build",
+    "deploy:client": "mv -f client/dist/ ./public",
     "install": "(npm run install:server) && (npm run install:client)",
     "build": "(npm install) && (npm run build:client) && (npm run deploy:client)",
     "start": "(cd server && npm start);"
