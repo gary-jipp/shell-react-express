@@ -30,20 +30,23 @@ const useData = function() {
       .then(res => {
         console.log(res.data);
         setData([res.data, ...data]);
+      })
+      .catch((err) => {
+        setStatus({error: err.message});
       });
   };
 
   const deleteItem = function(id) {
-
     axios.delete(`/api/data/${id}`)
       .then(res => {
         setData(data.filter(item => item.id !== id));
+      })
+      .catch((err) => {
+        setStatus({error: err.message});
       });
-
 
     setData(data.filter(item => item.id !== id));
   };
-
 
   return {status, data, addItem, deleteItem};
 };
