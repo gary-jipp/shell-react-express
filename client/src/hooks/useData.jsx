@@ -22,7 +22,7 @@ const useData = function() {
         setData(res.data);
       })
       .catch((err) => {
-        setStatus({error: err.message});
+        setError(err.message);
       });
   }, []);
 
@@ -33,7 +33,7 @@ const useData = function() {
         setData([res.data, ...data]);
       })
       .catch((err) => {
-        setStatus({error: err.message});
+        setError(err.message);
       });
   };
 
@@ -43,13 +43,13 @@ const useData = function() {
         setData(data.filter(item => item.id !== id));
       })
       .catch((err) => {
-        setStatus({error: err.message});
+        setError(err.message);
       });
 
     setData(data.filter(item => item.id !== id));
   };
 
-  return {status, data, addItem, deleteItem};
+  return {status, error, data, addItem, deleteItem};
 };
 
 export default useData;

@@ -5,7 +5,7 @@ import './App.css';
 
 export default function App() {
   const [text, setText] = useState("");
-  const {status, data, addItem, deleteItem} = useData();
+  const {status, error, data, addItem, deleteItem} = useData();
 
   const addFriend = function() {
     addItem(text);
@@ -16,10 +16,10 @@ export default function App() {
       <h1>Hello React World</h1>
 
       <section>
-        {!status.error &&
+        {!error &&
           <>API Version: <code>{status.version}</code></>}
-        {!!status.error &&
-          <>API Error: <code>{status.error}</code></>}
+        {!!error &&
+          <>API Error: <code>{error}</code></>}
       </section>
 
       <input type="text" value={text} onChange={e => setText(e.target.value)} />
