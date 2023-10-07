@@ -4,6 +4,8 @@ React-Express Shell app ready for node deployment to Heroku or other similar pla
 
 When the React App starts, it makes a single API call to the API server for the version number and renders that, or an error if API call was unsucessful
 
+Example deployment to "render" cloud platform
+
 ### Built for node 16
 
 Copy `env.example` to `.env` to override the default env values
