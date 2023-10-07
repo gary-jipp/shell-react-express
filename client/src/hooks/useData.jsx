@@ -2,6 +2,7 @@ import axios from "axios";
 import {useEffect, useState} from "react";
 
 const useData = function() {
+  const [error, setError] = useState();
   const [status, setStatus] = useState({});
   const [data, setData] = useState([]);
 
