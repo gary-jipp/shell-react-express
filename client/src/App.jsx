@@ -1,6 +1,6 @@
-import 'App.css';
-import axios from 'axios';
 import { useEffect, useState } from 'react';
+import axios from 'axios';
+import './App.css';
 
 export default function App() {
   const [status, setStatus] = useState({});
@@ -22,7 +22,7 @@ export default function App() {
       <section>
         {!status.error &&
           <>API Version: <code>{status.version}</code></>}
-        {status.error &&
+        {!!status.error &&
           <>API Error: <code>{status.error}</code></>}
       </section>
     </div>

@@ -4,13 +4,13 @@
   "description": "Shell for React/Express combined app",
   "main": "server.js",
   "scripts": {
-    "start": "(cd server-express && npm start);",
-    "install:server": "cd server-express && npm install",
-    "install:client": "cd client-react && npm install",
-    "build:client": "cd client-react && npm run build",
+    "start": "(cd server && npm start);",
+    "install:server": "cd server && npm install",
+    "install:client": "cd client && npm install",
+    "build:client": "cd client && npm run build",
     "install": "(npm run install:server) && (npm run install:client)",
     "build": "npm run build:client",
-    "deploy": "mv -f client-react/build/ ./public"
+    "deploy": "mv -f client/build/ ./public"
   },
   "repository": {
     "type": "git",
