@@ -26,7 +26,6 @@ let data = [
   {id: uniqid(), name: "Tom Cruise "},
 ];
 
-
 app.get("/api/status", (req, res) => {
   res.json({version: "1.01"});
 });

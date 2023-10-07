@@ -1,19 +1,9 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import useData from './hooks/useData';
+import ItemList from './components/FriendList';
 import './App.css';
 
 export default function App() {
-  const [status, setStatus] = useState({});
-
-  useEffect(() => {
-    axios.get('/api/status')
-      .then((res) => {
-        setStatus(res.data);
-      })
-      .catch((err) => {
-        setStatus({ error: err.message });
-      });
-  }, []);
+  const {status, data, addItem, deleteItem} = useData();
 
   return (
     <div className="App">
@@ -25,6 +15,8 @@ export default function App() {
         {!!status.error &&
           <>API Error: <code>{status.error}</code></>}
       </section>
+
+      <ItemList friends={data} deleteItem={deleteItem} />
     </div>
   );
 }
