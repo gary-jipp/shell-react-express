@@ -25,12 +25,23 @@ const useData = function() {
       });
   }, []);
 
-  const addItem = function(name, uid = uniqid()) {
-    setData([...data, {name, uid}]);
+  const addItem = function(name) {
+    axios.post("/api/data", {name})
+      .then(res => {
+        console.log(res.data);
+        setData([res.data, ...data]);
+      });
   };
 
   const deleteItem = function(id) {
-    return setData(data.filter(item => item.id !== id));
+
+    axios.delete(`/api/data/${id}`)
+      .then(res => {
+        setData(data.filter(item => item.id !== id));
+      });
+
+
+    setData(data.filter(item => item.id !== id));
   };
 
 
