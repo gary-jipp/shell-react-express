@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import useData from './hooks/useData';
-import DataList from './components/Dataist';
+import DataList from './components/DataList';
 import './App.css';
 
 export default function App() {
